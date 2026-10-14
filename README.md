@@ -22,7 +22,7 @@
 <!-- ========================= SOBRE MIM ========================= -->
 <h1>👋 Sobre mim</h1>
 
-Oi! Eu me chamo **Bruno Ferreira Gonçalves**, tenho 27 anos e moro em São Paulo. Passei mais de cinco anos trabalhando na área da saúde, lidando todos os dias com sistemas hospitalares, e foi no meio dessa rotina que acabei me apaixonando pela tecnologia. Resolvi seguir esse caminho e hoje curso **Análise e Desenvolvimento de Sistemas** na **UNICID**. Gosto de entender como as coisas funcionam por dentro, criar projetos do zero e aprender com cada erro pelo caminho.
+Oi! Eu me chamo **Bruno Ferreira Gonçalves**, tenho 27 anos e moro em São Paulo. Passei mais de cinco anos trabalhando na área da saúde, lidando todos os dias com sistemas hospitalares, e foi no meio dessa rotina que acabei me apaixonando pela tecnologia. Resolvi seguir esse caminho e hoje curso **Análise e Desenvolvimento de Sistemas** na **UNICID**. Gosto de entender como as coisas funcionam, criar projetos do zero e aprender com cada erro pelo caminho.
 
 Aqui no GitHub você acompanha meus projetos e a minha evolução nessa nova jornada.
 
