@@ -1,36 +1,36 @@
-name: Gerar Pac-Man das contribuições
+name: Atualizar minigame e registro de aventura
 
 on:
   schedule:
     - cron: '0 3 * * *' # todo dia, meia-noite no horário de Brasília
   workflow_dispatch: # permite rodar manualmente pela aba Actions
+  push:
+    branches: [main]
+    paths: ['rpg_stats.py']
 
 jobs:
-  generate:
+  update:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 10
     steps:
-      - name: Gerar o SVG do Pac-Man
-        uses: abozanona/pacman-contribution-graph@main
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          games: 'pacman'
+      - uses: actions/checkout@v4
 
-      - name: Deixar o Pac-Man em preto e branco (tema do perfil)
-        run: |
-          for f in dist/*.svg; do
-            sed -i -e 's/#0d1117/#000000/gI' -e 's/#161b22/#161616/gI' \
-                   -e 's/#0e4429/#3a3a3a/gI' -e 's/#006d32/#666666/gI' \
-                   -e 's/#26a641/#999999/gI' -e 's/#39d353/#dddddd/gI' "$f"
-            sed -i '0,/<svg\([^>]*\)>/s//<svg\1><style>image,#pacman{filter:grayscale(1)}<\/style>/' "$f"
-          done
-
-      - name: Publicar na branch output
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+      - uses: actions/setup-python@v5
         with:
-          target_branch: output
-          build_dir: dist
+          python-version: '3.12'
+
+      - name: Gerar registro de aventura e minigame
+        run: python rpg_stats.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Salvar no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/registro.svg assets/minigame.svg
+          git diff --staged --quiet || git commit -m "Atualiza registro de aventura e minigame"
+          git pull --rebase
+          git push
