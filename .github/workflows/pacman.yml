@@ -24,7 +24,7 @@ jobs:
             sed -i -e 's/#0d1117/#000000/gI' -e 's/#161b22/#161616/gI' \
                    -e 's/#0e4429/#3a3a3a/gI' -e 's/#006d32/#666666/gI' \
                    -e 's/#26a641/#999999/gI' -e 's/#39d353/#dddddd/gI' "$f"
-            sed -i '0,/<svg\([^>]*\)>/s//<svg\1><style>image{filter:grayscale(1)}<\/style>/' "$f"
+            sed -i '0,/<svg\([^>]*\)>/s//<svg\1><style>image,#pacman{filter:grayscale(1)}<\/style>/' "$f"
           done
 
       - name: Publicar na branch output
