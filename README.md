@@ -32,22 +32,11 @@
 <!-- ========================= MISSÕES ========================= -->
 <img src="assets/missoes.svg" width="100%" alt="Diário de missões: CellGO e Santo Taquito em andamento; README de perfil concluído" />
 
-<!-- ========================= ESTATÍSTICAS ========================= -->
-<img src="assets/titulo-registro.svg" width="100%" alt="Registro de aventura" />
-
-<div align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=brunoferreira15&show_icons=true&locale=pt-br&hide_border=true&count_private=true&bg_color=000000&title_color=ffffff&text_color=ffffff&icon_color=ffffff" alt="Estatísticas do GitHub" />
-  <img height="170" src="linguagens.svg" alt="Linguagens mais usadas" />
-  <br/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=brunoferreira15&theme=dark&hide_border=true&locale=pt_BR&background=000000&ring=FFFFFF&fire=FFFFFF&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=FFFFFF&sideLabels=FFFFFF&dates=AAAAAA&stroke=555555" alt="Sequência de contribuições" />
-</div>
+<!-- ========================= REGISTRO DE AVENTURA ========================= -->
+<img src="assets/registro.svg" width="100%" alt="Registro de aventura: status, linguagens e sequência de contribuições" />
 
 <!-- ========================= MINIGAME ========================= -->
-<img src="assets/titulo-minigame.svg" width="100%" alt="Minigame" />
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/brunoferreira15/brunoferreira15/output/pacman-contribution-graph-dark.svg" width="100%" alt="Pac-Man comendo o gráfico de contribuições" />
-</div>
+<img src="assets/minigame.svg" width="100%" alt="Minigame: Pac-Man comendo o gráfico de contribuições" />
 
 <br/>
 
