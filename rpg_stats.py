@@ -157,10 +157,22 @@ def minigame(u):
     def say(text, x, y, big=False):
         if not big and st["t"] - st["last_msg"] < 10: return
         st["last_msg"] = st["t"]
-        if big:
-            near = [m for m in msgs if m[4] and st["t"] - m[0] < 36 and abs(m[3] - y) < 30]
-            y += 15 * len(near)
-        msgs.append((st["t"], text, x, max(14, y), big))
+        def span(tx, X):
+            w = tw(tx, 1); fx = max(4, min(GW - w - 4, X - w / 2))
+            return fx - 4, fx + w + 4
+        a, b = span(text, x)
+        live = [m for m in msgs if st["t"] - m[0] < (36 if m[4] else 40) + 2]
+        y = max(14, y)
+        for _ in range(12):
+            hit = False
+            for m in live:
+                ma, mb = span(m[1], m[2])
+                if a < mb and ma < b and abs(m[3] - y) < 15:
+                    hit = True; break
+            if not hit: break
+            y += 15
+            if y > GH - 4: y = 14
+        msgs.append((st["t"], text, x, y, big))
 
     def empty_cell():
         for _ in range(80):
