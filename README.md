@@ -36,7 +36,7 @@
 <a href="https://github.com/brunoferreira15?tab=repositories"><img src="assets/registro.svg" width="100%" alt="Registro de aventura: status, linguagens e sequência de contribuições" /></a>
 
 <!-- ========================= MINIGAME ========================= -->
-<a href="https://github.com/brunoferreira15?tab=repositories"><img src="assets/minigame.svg" width="100%" alt="Minigame: Pac-Man comendo o gráfico de contribuições" /></a>
+<a href="https://github.com/brunoferreira15?tab=repositories"><img src="assets/minigame.svg" width="100%" alt="Minigame Caça aos bugs: o mago coleta cristais do gráfico de contribuições e corrige bugs com magias" /></a>
 
 <br/>
 
